@@ -7,6 +7,7 @@
     <form-beans>
         <form-bean name="loginForm" type="com.casestudy.cs.form.LoginForm" />
     </form-beans>
+
     <action-mappings>
         <action name="loginForm" path="/login"
                 type="com.casestudy.cs.action.LoginAction" scope="request"
@@ -14,5 +15,16 @@
             <forward name="failure" path="/login.jsp" redirect="true" />
             <forward name="success" path="/success.jsp" redirect="true" />
         </action>
+
+        <action path="/activateJob"
+                type="com.casestudy.cs.action.ActivateJobAction">
+            <forward name="failure" path="/login.jsp" redirect="true" />
+            <forward name="success" path="/activateJob.jsp" redirect="true" />
+        </action>
+
+        <action path="/daily" type="com.casestudy.cs.action.DailyAction" parameter="cmd">
+        </action>
     </action-mappings>
+
+
 </struts-config>

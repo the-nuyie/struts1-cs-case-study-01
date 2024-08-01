@@ -30,6 +30,7 @@
             <version>2.5</version>
         </dependency>
 
+        <!--
         <dependency>
             <groupId>org.apache.struts</groupId>
             <artifactId>struts-core</artifactId>
@@ -41,6 +42,66 @@
             <artifactId>struts-taglib</artifactId>
             <version>1.3.10</version>
         </dependency>
+
+        < https://mvnrepository.com/artifact/io.github.weblegacy/struts-extras -
+        <dependency>
+            <groupId>org.apache.struts</groupId>
+            <artifactId>struts-extras</artifactId>
+            <version>1.3.10</version>
+        </dependency>
+        -->
+        <!-- https://mvnrepository.com/artifact/io.github.weblegacy/struts-core -->
+        <dependency>
+            <groupId>io.github.weblegacy</groupId>
+            <artifactId>struts-core</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.weblegacy/struts-taglib -->
+        <dependency>
+            <groupId>io.github.weblegacy</groupId>
+            <artifactId>struts-taglib</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.weblegacy/struts-extras -->
+        <dependency>
+            <groupId>io.github.weblegacy</groupId>
+            <artifactId>struts-extras</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+
+
+        <!-- Start : dependency for Quartz scheduler -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.3.2</version>
+            <!--
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
+            -->
+        </dependency>
+        <!-- Quartz uses SLF4J, so we need an actual logger -->
+        <!-- Case 1 : use slf4j-simple, this dependency will add slf4j-simple-1.7.7.jar to classpath -->
+        <!--
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        -->
+        <!-- Case 2 : use slf4j-log4j12 -->
+        <!-- this case must include log4j.properties in classpath (this file is in resources folder) -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+
+
 
     </dependencies>
 

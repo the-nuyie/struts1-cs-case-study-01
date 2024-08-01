@@ -4,10 +4,10 @@ pageEncoding="UTF-8"%>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Welcome Page</title>
+    <title>Activate Job Page</title>
 </head>
 <body>
-<h1>Hello JavaWebTutor</h1>
-<a href="index.jsp">Goto Index</a>
+<h1>Activate Job</h1><br>
+
 </body>
 </html>
